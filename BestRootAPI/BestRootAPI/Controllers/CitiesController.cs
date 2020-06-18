@@ -29,7 +29,6 @@ namespace BestRootAPI.Controllers
                 CityName = x.CityName,
                 DestinationPoint = x.DestinationPoint,
                 StartPoint = x.StartPoint,
-                NeedsHotel = x.NeedsHotel,
                 NeedsRestaurant = x.NeedsRestaurant,
                 RestaurantType = x.RestaurantType,
                 NeedsMuseum = x.NeedsMuseum,
@@ -87,7 +86,7 @@ namespace BestRootAPI.Controllers
             {
                 finalCities.Add(new Tuple<DateTime, List<Models.City>>(cityGroup.Key, cityGroup.ToList()));
             }
-            GetLastRouteResult result = new GetLastRouteResult { Cities = finalCities };
+            GetLastRouteResult result = new GetLastRouteResult { Routes = finalCities };
             result.AddToken(this.HttpContext);
             return new JsonResult(result);
         }

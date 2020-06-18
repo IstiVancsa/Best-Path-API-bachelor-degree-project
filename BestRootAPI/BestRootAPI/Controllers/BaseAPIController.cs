@@ -25,8 +25,9 @@ namespace BestRootAPI.Controllers
 {
     [APITokenGeneratorActionFilter]
     [ApiController]
+    [Authorize]
     [Microsoft.AspNetCore.Mvc.Route("[controller]")]
-    public class BaseApiController<TModel, TEntity, TRepository, TFilterModel> : ControllerBase, IBaseApiController
+    public abstract class BaseApiController<TModel, TEntity, TRepository, TFilterModel> : ControllerBase, IBaseApiController
         where TModel : BaseModel, new()
         where TEntity : BaseEntity, new()
         where TRepository : class, IGenericRepository<TEntity>
