@@ -16,6 +16,7 @@ namespace Models
         public Guid UserId { get; set; }
         public LocationDTO Location { get; set; }
         public int CityOrder { get; set; }
+        public DateTime ArrivingTime { get; set; }
 
         public override BaseEntity GetEntity()
         {
@@ -32,7 +33,8 @@ namespace Models
                 Latitude = this.Location.lat,
                 Longitude = this.Location.lng,
                 UserId = this.UserId,
-                CityOrder = this.CityOrder
+                CityOrder = this.CityOrder,
+                ArrivingTime = this.ArrivingTime
             };
         }
 

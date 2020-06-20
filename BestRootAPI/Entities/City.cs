@@ -16,5 +16,6 @@ namespace Entities
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public int CityOrder { get; set; }
+        public DateTime ArrivingTime { get; set; }
     }
 }
