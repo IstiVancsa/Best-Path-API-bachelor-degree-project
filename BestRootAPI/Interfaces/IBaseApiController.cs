@@ -10,7 +10,6 @@ namespace Interfaces
     {
         string APIPath { get; }
         IConfiguration Configuration { get; }
-        string NewToken { get; set; }
         IActionResult GetDefault();
     }
 }

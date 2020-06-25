@@ -41,7 +41,6 @@ namespace BestRootAPI.Controllers
         public Expression<Func<TEntity, TModel>> GetByFilterSelector = null;
 
         public TRepository GenericRepository { get; }
-        public string NewToken { get; set; }
 
         public BaseApiController(TRepository genericRepository, IConfiguration configuration, Microsoft.AspNetCore.Identity.UserManager<IdentityUser> userManager)
         {
